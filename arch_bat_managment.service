@@ -1,0 +1,16 @@
+[Unit]
+Description=regulates the discharging behaviour of batteries
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ultrabay-battery-discharge-regulation
+This .service file is triggered by a /etc/systemd/system/*.timer every 30 seconds
+[Unit]
+Description=regulates the discharging behaviour of batteries
+
+[Timer]
+OnBootSec=0min
+OnCalendar=*:*:0/30
+
+[Install]
+WantedBy=multi-user.target
