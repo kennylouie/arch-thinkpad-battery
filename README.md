@@ -16,6 +16,8 @@ Place the regulator.sh in the /usr/local/sbin/ directory.
 Place the arch_bat_management.service in the /etc/systemd/system/ directory.
 #### 3. Activate the service using usual systemd commands.
 
+## discussion
+
 My only gripe with this setup is that it consumes ~1-2W (powertop estimate) as it is continuously running the script every 30 seconds. I originally intended to use a .path unit instead by checking tp_smapi's /sys/devices/platform/smapi/ac_connected file. I thought that a PathModified .path file would be able to check for this file to determine AC connection, and if changed will invoke the .service file which in turns activates the bash script.
 
 If anyone has any suggestions on improving or providing a much better approach, I would really appreciate it. I note that there is a script written on the thinkwiki page on how to use ultrabay batteries, but I would rather not use both batteries continuously.
