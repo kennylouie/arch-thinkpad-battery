@@ -9,7 +9,7 @@ My goal is to always drain the main battery first and reserve the ultrabay batte
 
 This script was tested on a T61 running linux 4.4.5-1 kernel and tp_smapi 0.41-81. The script is based on using tp_smapi's forced discharge setting to force the main battery to discharge.
 
-### scripts
+### the scripts
 #### 1. Custom script to check battery status and regulate its actions
 Place the regulator.sh in the /usr/local/sbin/ directory.
 #### 2. The regulator.sh will be activated by a systemd service.
